@@ -1,0 +1,20 @@
+helloworld - User Guide
+Author: Majd Aboul Hosn (EECE 435L, Lab 11)
+
+DESCRIPTION
+  helloworld prints "Hello, World from Majd_AboulHosn!" to the console.
+
+INSTALL
+  sudo dpkg -i helloworld_majd_aboulhosn.deb      (Debian / Ubuntu)
+  sudo rpm -i helloworld_majd_aboulhosn-1.0-1.x86_64.rpm   (RedHat / Fedora)
+
+USAGE
+  helloworld
+
+FILES
+  /usr/local/bin/helloworld                 application binary
+  /usr/share/doc/helloworld/README.md       build instructions
+  /usr/share/doc/helloworld/user_guide.txt  this guide
+
+REMOVE
+  sudo dpkg -r helloworld    or    sudo rpm -e helloworld

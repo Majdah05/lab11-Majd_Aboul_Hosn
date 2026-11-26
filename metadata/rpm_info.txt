@@ -1,0 +1,19 @@
+Name        : helloworld
+Version     : 1.0
+Release     : 1
+Architecture: x86_64
+Install Date: (not installed)
+Group       : Unspecified
+Size        : 17002
+License     : GPL
+Signature   : (none)
+Source RPM  : helloworld-1.0-1.src.rpm
+Build Date  : Thu Nov 26 18:46:54 2026
+Build Host  : Majd-Laptop.localdomain
+Summary     : A simple Hello World application
+Description :
+A simple Hello World application that prints
+"Hello, World from Majd_AboulHosn!" (EECE 435L Lab 11).
+/usr/local/bin/helloworld
+/usr/share/doc/helloworld/README.md
+/usr/share/doc/helloworld/user_guide.txt

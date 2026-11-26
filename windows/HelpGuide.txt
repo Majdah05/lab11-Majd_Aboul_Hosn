@@ -1,0 +1,18 @@
+HelloWorld - Help / User Guide
+Author: Majd Aboul Hosn (EECE 435L, Lab 11)
+
+USAGE
+  helloworld.exe            Prints "Hello, World from Majd_AboulHosn!"
+  helloworld.exe --version  Also prints the version number
+
+INSTALL LOCATION
+  The MSI is a per-user install (no admin rights needed) and installs to:
+    %LOCALAPPDATA%\Programs\HelloWorld_Majd_AboulHosn\
+    helloworld.exe  - the application binary
+    README.md       - build and run instructions
+    HelpGuide.txt   - this help document
+  A Start Menu shortcut "HelloWorld Majd AboulHosn" is also created.
+
+UNINSTALL
+  Settings > Apps > Installed apps > HelloWorld Majd AboulHosn > Uninstall
+  or: msiexec /x helloworld_majd_aboulhosn.msi

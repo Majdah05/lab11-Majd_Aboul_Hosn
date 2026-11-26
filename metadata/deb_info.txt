@@ -1,0 +1,21 @@
+ new Debian package, version 2.0.
+ size 3214 bytes: control archive=284 bytes.
+     247 bytes,     8 lines   *  control
+ Package: helloworld
+ Version: 1.0
+ Section: base
+ Priority: optional
+ Architecture: amd64
+ Maintainer: Majd Aboul Hosn <majd.ahosn@gmail.com>
+ Description: A simple Hello World application
+  Prints "Hello, World from Majd_AboulHosn!" (EECE 435L Lab 11).
+drwxr-xr-x root/root         0 2026-11-26 18:45 ./
+drwxr-xr-x root/root         0 2026-11-26 18:45 ./usr/
+drwxr-xr-x root/root         0 2026-11-26 18:45 ./usr/local/
+drwxr-xr-x root/root         0 2026-11-26 18:45 ./usr/local/bin/
+-rwxr-xr-x root/root     15960 2026-11-26 18:45 ./usr/local/bin/helloworld
+drwxr-xr-x root/root         0 2026-11-26 18:45 ./usr/share/
+drwxr-xr-x root/root         0 2026-11-26 18:45 ./usr/share/doc/
+drwxr-xr-x root/root         0 2026-11-26 18:45 ./usr/share/doc/helloworld/
+-rw-r--r-- root/root       613 2026-11-26 18:45 ./usr/share/doc/helloworld/README.md
+-rw-r--r-- root/root       581 2026-11-26 18:45 ./usr/share/doc/helloworld/user_guide.txt

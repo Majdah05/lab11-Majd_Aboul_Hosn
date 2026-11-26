@@ -1,0 +1,63 @@
+﻿<!-- EECE 435L Lab 11 - WiX v5 installer for HelloWorld (Majd Aboul Hosn) -->
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="HelloWorld Majd AboulHosn"
+           Manufacturer="Majd Aboul Hosn - AUB EECE 435L"
+           Version="1.0.0.0"
+           UpgradeCode="6B1F3C2A-8E4D-4F7A-9C11-4350000A0110"
+           Scope="perUser">
+
+    <SummaryInformation Description="Hello World from Majd_AboulHosn installer"
+                        Manufacturer="Majd Aboul Hosn" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- Directories: per-user install to %LOCALAPPDATA%\Programs\HelloWorld_Majd_AboulHosn
+         (no admin rights required) and a Start Menu folder -->
+    <StandardDirectory Id="LocalAppDataFolder">
+      <Directory Id="ProgramsDir" Name="Programs">
+        <Directory Id="INSTALLFOLDER" Name="HelloWorld_Majd_AboulHosn" />
+      </Directory>
+    </StandardDirectory>
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="AppMenuFolder" Name="HelloWorld Majd AboulHosn" />
+    </StandardDirectory>
+
+    <!-- Components: the smallest installable units. Each has its own GUID and a key path
+         (per-user components use an HKCU registry value as key path). -->
+    <ComponentGroup Id="AppFiles" Directory="INSTALLFOLDER">
+      <Component Id="HelloExe" Guid="3F1A2B4C-5D6E-4F70-8A91-B2C3D4E5F601">
+        <File Id="HelloworldExe" Source="helloworld.exe" />
+        <RemoveFolder Id="RemoveInstallFolder" On="uninstall" />
+        <RemoveFolder Id="RemoveProgramsDir" Directory="ProgramsDir" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\MajdAboulHosn\HelloWorld" Name="exe"
+                       Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+      <Component Id="ReadmeDoc" Guid="3F1A2B4C-5D6E-4F70-8A91-B2C3D4E5F602">
+        <File Id="ReadmeMd" Source="README.md" />
+        <RegistryValue Root="HKCU" Key="Software\MajdAboulHosn\HelloWorld" Name="readme"
+                       Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+      <Component Id="HelpDoc" Guid="3F1A2B4C-5D6E-4F70-8A91-B2C3D4E5F603">
+        <File Id="HelpGuideTxt" Source="HelpGuide.txt" />
+        <RegistryValue Root="HKCU" Key="Software\MajdAboulHosn\HelloWorld" Name="help"
+                       Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </ComponentGroup>
+
+    <Component Id="StartMenuShortcut" Directory="AppMenuFolder">
+      <Shortcut Id="HelloShortcut" Name="HelloWorld Majd AboulHosn"
+                Target="[System64Folder]cmd.exe"
+                Arguments="/k &quot;[INSTALLFOLDER]helloworld.exe&quot;"
+                WorkingDirectory="INSTALLFOLDER" />
+      <RemoveFolder Id="RemoveAppMenuFolder" On="uninstall" />
+      <RegistryValue Root="HKCU" Key="Software\MajdAboulHosn\HelloWorld"
+                     Name="installed" Type="integer" Value="1" KeyPath="yes" />
+    </Component>
+
+    <!-- Feature: what the user installs; groups the components -->
+    <Feature Id="MainFeature" Title="HelloWorld Application" Level="1">
+      <ComponentGroupRef Id="AppFiles" />
+      <ComponentRef Id="StartMenuShortcut" />
+    </Feature>
+  </Package>
+</Wix>

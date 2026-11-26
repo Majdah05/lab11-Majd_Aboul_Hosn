@@ -1,0 +1,6 @@
+*.wixpdb
+windows/helloworld.exe
+windows/obj/
+windows/bin/
+linux/helloworld
+linux/myapp/

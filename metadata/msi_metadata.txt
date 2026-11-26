@@ -1,0 +1,30 @@
+=== MSI Property table: helloworld_majd_aboulhosn.msi ===
+UpgradeCode  |  {6B1F3C2A-8E4D-4F7A-9C11-4350000A0110}
+Manufacturer  |  Majd Aboul Hosn - AUB EECE 435L
+ProductCode  |  {BD53D00B-20A2-40E2-B820-42748FB6F136}
+ProductLanguage  |  0
+ProductName  |  HelloWorld Majd AboulHosn
+ProductVersion  |  1.0.0.0
+SecureCustomProperties  |  WIX_DOWNGRADE_DETECTED;WIX_UPGRADE_DETECTED
+
+=== Feature table ===
+MainFeature  |  HelloWorld Application  |  1
+
+=== Component table (Component | Directory) ===
+HelloExe  |  INSTALLFOLDER
+ReadmeDoc  |  INSTALLFOLDER
+HelpDoc  |  INSTALLFOLDER
+StartMenuShortcut  |  AppMenuFolder
+
+=== File table (File | FileName | Component) ===
+HelloworldExe  |  mgebyti2.exe|helloworld.exe  |  HelloExe
+ReadmeMd  |  README.md  |  ReadmeDoc
+HelpGuideTxt  |  hmsrr63r.txt|HelpGuide.txt  |  HelpDoc
+
+=== Directory table (Directory | Parent | DefaultDir) ===
+INSTALLFOLDER  |  ProgramsDir  |  qcirzuig|HelloWorld_Majd_AboulHosn
+ProgramsDir  |  LocalAppDataFolder  |  Programs
+LocalAppDataFolder  |  TARGETDIR  |  LocalApp
+AppMenuFolder  |  ProgramMenuFolder  |  5n4shnrs|HelloWorld Majd AboulHosn
+ProgramMenuFolder  |  TARGETDIR  |  PMenu
+TARGETDIR  |    |  SourceDir

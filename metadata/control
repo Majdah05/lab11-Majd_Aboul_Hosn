@@ -1,0 +1,8 @@
+Package: helloworld
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: amd64
+Maintainer: Majd Aboul Hosn <majd.ahosn@gmail.com>
+Description: A simple Hello World application
+ Prints "Hello, World from Majd_AboulHosn!" (EECE 435L Lab 11).
